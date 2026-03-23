@@ -1,0 +1,2814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>OptiShield</title>
+
+<style>
+
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI, sans-serif;
+scroll-behavior:smooth;
+}
+
+/* COLORS */
+
+:root{
+--primary:#4F46E5;
+--secondary:#7C3AED;
+--accent:#EC4899;
+--text:#0F172A;
+--bg:#F8FAFC;
+}
+
+/* HERO */
+
+.hero{
+padding:160px 8%;
+background:var(--bg);
+}
+
+.hero-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.hero h1{
+font-size:44px;
+color:var(--text);
+margin-bottom:20px;
+}
+
+.hero p{
+color:#555;
+line-height:1.7;
+margin-bottom:25px;
+}
+
+.hero-buttons{
+display:flex;
+gap:15px;
+}
+
+.btn{
+padding:12px 24px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+}
+
+.btn-primary{
+background:var(--primary);
+color:white;
+}
+
+.btn-secondary{
+border:1px solid var(--primary);
+color:var(--primary);
+}
+
+.hero img{
+width:100%;
+}
+
+/* PLATFORM */
+
+.platform{
+padding:120px 8%;
+background:white;
+}
+
+.section-title{
+text-align:center;
+font-size:34px;
+margin-bottom:10px;
+}
+
+.section-sub{
+text-align:center;
+color:#666;
+margin-bottom:50px;
+}
+
+.platform-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.platform-card{
+background:#f9fafb;
+padding:25px;
+border-radius:10px;
+text-align:center;
+transition:.3s;
+}
+
+.platform-card:hover{
+transform:translateY(-6px);
+box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.platform-img{
+width:100%;
+height:160px;
+object-fit:contain;
+margin-bottom:15px;
+}
+
+/* PROCESS */
+
+.process{
+padding:120px 8%;
+background:#f9fafb;
+}
+
+.process-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+text-align:center;
+}
+
+.process img{
+width:100%;
+height:150px;
+object-fit:contain;
+margin-bottom:10px;
+}
+
+/* PRICING */
+
+.pricing{
+padding:120px 8%;
+background:white;
+}
+
+.pricing-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+}
+
+.price-card{
+border:1px solid #eee;
+padding:35px;
+border-radius:10px;
+text-align:center;
+}
+
+.price-card h3{
+margin-bottom:10px;
+}
+
+.price-card ul{
+list-style:none;
+margin:20px 0;
+}
+
+.price-card li{
+margin:8px 0;
+color:#555;
+}
+
+/* FAQ */
+
+.faq{
+padding:120px 8%;
+background:black;
+color:white;
+}
+
+.faq-container{
+max-width:800px;
+margin:auto;
+}
+
+.faq-item{
+border-bottom:1px solid #333;
+padding:18px 0;
+}
+
+.faq-question{
+display:flex;
+justify-content:space-between;
+cursor:pointer;
+}
+
+.faq-answer{
+display:none;
+color:#ccc;
+margin-top:8px;
+}
+
+/* CONTACT */
+
+.contact{
+padding:120px 8%;
+background:white;
+}
+
+.contact-container{
+max-width:1000px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+}
+
+.contact input,
+.contact textarea{
+width:100%;
+padding:12px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:6px;
+}
+
+/* FOOTER */
+
+.footer{
+background:#111;
+color:#aaa;
+padding:20px;
+text-align:center;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.nav-links{
+display:none;
+position:absolute;
+top:60px;
+left:0;
+width:100%;
+background:white;
+flex-direction:column;
+padding:20px;
+}
+
+.menu-btn{
+display:block;
+}
+
+.hero-container,
+.platform-grid,
+.process-grid,
+.pricing-grid,
+.contact-container{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+
+</header>
+<header class="navbar">
+
+<div class="nav-container">
+
+<div class="logo">OptiShield</div>
+
+<nav id="navMenu">
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#process">Process</a>
+<a href="#platform">Platform</a>
+<a href="#pricing">Pricing</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+<div class="menu-toggle" id="menuToggle">
+<span></span>
+<span></span>
+<span></span>
+</div>
+
+</div>
+
+</header>
+
+
+
+<style>
+
+/* NAVBAR */
+
+.navbar{
+width:100%;
+background:linear-gradient(
+#4E387E,
+#571B7E,
+#4B0150,
+#36013F,
+#2E1A47,
+#461B7E,
+#4B0082,
+#342D7E,
+#663399,
+#6A287E,
+#8B008B,
+#800080
+);
+padding:11px 8%;
+position:fixed;
+top:0;
+left:0;
+z-index:1000;
+font-family:'Segoe UI',sans-serif;
+box-shadow:0 3px 15px rgba(0,0,0,0.15);
+}
+
+/* CONTAINER */
+
+.nav-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+/* LOGO */
+
+.logo{
+font-size:22px;
+font-weight:700;
+color:white;
+}
+
+/* NAV LINKS */
+
+#navMenu{
+display:flex;
+gap:35px;
+align-items:center;
+}
+
+/* LINKS */
+
+#navMenu a{
+text-decoration:none;
+color:white;
+font-size:15px;
+font-weight:500;
+position:relative;
+}
+
+/* HOVER UNDERLINE */
+
+#navMenu a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0%;
+height:2px;
+background:white;
+transition:0.3s;
+}
+
+#navMenu a:hover::after{
+width:100%;
+}
+
+/* HAMBURGER */
+
+.menu-toggle{
+display:none;
+flex-direction:column;
+gap:5px;
+cursor:pointer;
+}
+
+.menu-toggle span{
+width:25px;
+height:3px;
+background:white;
+display:block;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+#navMenu{
+position:absolute;
+top:70px;
+left:0;
+width:100%;
+background:linear-gradient(
+#4E387E,
+#571B7E,
+#4B0150,
+#36013F,
+#2E1A47,
+#461B7E,
+#4B0082,
+#342D7E,
+#663399,
+#6A287E,
+#8B008B,
+#800080
+);
+flex-direction:column;
+padding:25px 0;
+gap:20px;
+display:none;
+}
+
+#navMenu.active{
+display:flex;
+}
+
+.menu-toggle{
+display:flex;
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+const toggle = document.getElementById("menuToggle");
+const menu = document.getElementById("navMenu");
+
+/* OPEN CLOSE MENU */
+
+toggle.addEventListener("click",()=>{
+menu.classList.toggle("active");
+});
+
+/* CLOSE MENU WHEN LINK CLICKED */
+
+document.querySelectorAll("#navMenu a").forEach(link=>{
+
+link.addEventListener("click",()=>{
+
+menu.classList.remove("active");
+
+});
+
+});
+
+/* SMOOTH SCROLL */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+anchor.addEventListener("click",function(e){
+
+e.preventDefault();
+
+document.querySelector(this.getAttribute("href")).scrollIntoView({
+behavior:"smooth"
+});
+
+});
+
+});
+
+</script>
+<section class="hero-section" id="home">
+
+<div class="hero-container">
+
+<!-- LEFT TEXT -->
+
+<div class="hero-left">
+
+<h1>AI-Driven Building Energy Optimisation</h1>
+
+<div class="hero-divider"></div>
+
+<p class="hero-text">
+OptiShield is a UK-based clean technology platform that provides an 
+AI-assisted optimisation layer on top of existing Building Management Systems (BMS).
+</p>
+
+<p class="hero-text">
+The platform integrates with HVAC and plant systems to reduce energy consumption,
+lower carbon emissions, and improve operational efficiency without requiring
+hardware replacement or complex retrofitting.
+</p>
+
+<p class="hero-text">
+It operates in phased modes Observe, Shadow, and Guarded Control ensuring
+safe deployment, measurable savings, and full operator control.
+</p>
+
+<div class="hero-buttons">
+
+<a href="#platform" class="btn-primary">Explore Platform</a>
+
+<a href="#contact" class="btn-secondary">Request Demo</a>
+
+</div>
+
+</div>
+
+<!-- RIGHT IMAGE -->
+
+<div class="hero-right">
+
+<img src="o1.jpeg" alt="OptiShield Energy Platform">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+/* COLOR VARIABLES */
+
+:root{
+--lightblue:#ADD8E6;
+--darkblue:#00008B;
+--brown:#513B1C;
+--text:#444;
+--white:#ffffff;
+}
+
+
+/* HERO SECTION */
+
+.hero-section{
+padding:120px 8%;
+background:white;
+font-family:'Segoe UI',sans-serif;
+}
+
+
+/* CONTAINER */
+
+.hero-container{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+
+/* LEFT */
+
+.hero-left h1{
+font-size:46px;
+color:var(--darkblue);
+margin-bottom:12px;
+line-height:1.2;
+}
+
+
+/* DIVIDER */
+
+.hero-divider{
+width:70px;
+height:4px;
+background:linear-gradient(
+#4E387E,
+#571B7E,
+#4B0150,
+#36013F,
+#2E1A47,
+#461B7E,
+#4B0082,
+#342D7E,
+#663399,
+#6A287E,
+#8B008B,
+#800080
+);
+margin:15px 0 25px 0;
+border-radius:3px;
+}
+
+
+/* TEXT */
+
+.hero-text{
+color:var(--text);
+font-size:17px;
+line-height:1.7;
+margin-bottom:20px;
+max-width:520px;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons{
+display:flex;
+gap:15px;
+margin-top:10px;
+}
+
+
+/* PRIMARY BUTTON */
+
+.btn-primary{
+background:linear-gradient(
+#4E387E,
+#571B7E,
+#4B0150,
+#36013F,
+#2E1A47,
+#461B7E,
+#4B0082,
+#342D7E,
+#663399,
+#6A287E,
+#8B008B,
+#800080
+);
+color:white;
+padding:13px 26px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn-primary:hover{
+opacity:0.9;
+transform:translateY(-2px);
+}
+
+
+/* SECONDARY BUTTON */
+
+.btn-secondary{
+border:2px solid #00008B;
+color:#00008B;
+padding:13px 26px;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.btn-secondary:hover{
+background:#00008B;
+color:white;
+}
+
+
+/* IMAGE */
+
+.hero-right img{
+width:100%;
+border-radius:12px;
+box-shadow:0 20px 40px rgba(0,0,0,0.15);
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero-section{
+padding:80px 6%;
+}
+
+.hero-container{
+grid-template-columns:1fr;
+gap:35px;
+text-align:center;
+}
+
+.hero-left h1{
+font-size:32px;
+}
+
+.hero-divider{
+margin:15px auto 25px auto;
+}
+
+.hero-text{
+margin:auto;
+font-size:16px;
+max-width:100%;
+}
+
+.hero-buttons{
+justify-content:center;
+flex-wrap:wrap;
+}
+
+.hero-right{
+margin-top:20px;
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+/* Smooth Scroll */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+anchor.addEventListener("click", function(e) {
+
+e.preventDefault();
+
+document.querySelector(this.getAttribute("href")).scrollIntoView({
+behavior:"smooth"
+});
+
+});
+
+});
+
+</script>
+<section class="about-section" id="about">
+
+<div class="about-container">
+
+<!-- LEFT CONTENT -->
+
+<div class="about-left">
+
+<h2>About OptiShield</h2>
+
+<div class="about-divider"></div>
+
+<p class="about-sub">
+AI-Driven Building Energy Optimisation Platform
+</p>
+
+<p>
+OptiShield Systems is a UK-based clean technology company delivering
+a retrofit-first AI optimisation layer for existing Building Management
+Systems (BMS). The platform reduces energy consumption, lowers carbon
+emissions, and improves operational performance without requiring
+hardware replacement or complex engineering redesign.
+</p>
+
+<p>
+By integrating directly with HVAC and plant systems, OptiShield uses
+live operational data to optimise building performance safely. The
+platform ensures measurable energy savings while maintaining strict
+comfort, compliance, and equipment protection constraints.
+</p>
+
+<div class="about-features">
+
+<div class="feature">BMS Integration</div>
+<div class="feature">AI Optimisation</div>
+<div class="feature">Safety Controls</div>
+<div class="feature">Phased Deployment</div>
+<div class="feature">Energy Tracking</div>
+<div class="feature">Safe Rollback</div>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT SIDE -->
+
+<div class="about-right">
+
+<div class="founder-box">
+
+<h3 class="founder-title">Founder</h3>
+
+<div class="founder-divider"></div>
+
+<p class="founder-sub">
+Energy Systems Innovator & AI Optimisation Specialist
+</p>
+
+<p>
+OptiShield was founded by <strong>Muhammad Abdul Aleem </strong> with a vision
+to transform building optimisation into a scalable, software-driven
+solution. The focus is on eliminating complex commissioning and enabling
+portfolio-wide deployment across commercial buildings.
+</p>
+
+<p>
+The platform is built around safety, transparency, and measurable impact,
+ensuring every optimisation action is controlled, auditable, and aligned
+with operational and regulatory requirements.
+</p>
+
+<div class="founder-links">
+
+<a href="" class="linkedin-btn">
+LinkedIn
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<style>
+
+/* SECTION */
+
+.about-section{
+padding:140px 8%;
+background:linear-gradient(
+#4E387E,
+#571B7E,
+#4B0150,
+#36013F,
+#2E1A47,
+#461B7E,
+#4B0082,
+#342D7E,
+#663399,
+#6A287E,
+#8B008B,
+#800080
+);
+font-family:'Segoe UI',sans-serif;
+}
+
+
+/* CONTAINER */
+
+.about-container{
+max-width:1150px;
+margin:auto;
+display:grid;
+grid-template-columns:1.3fr 1fr;
+gap:80px;
+align-items:center;
+}
+
+
+/* LEFT */
+
+.about-left h2{
+font-size:42px;
+margin-bottom:10px;
+color:white;
+}
+
+
+/* DIVIDER */
+
+.about-divider{
+width:70px;
+height:4px;
+background:white;
+margin-bottom:15px;
+border-radius:3px;
+}
+
+
+/* SUB */
+
+.about-sub{
+color:#f0f6ff;
+font-weight:600;
+margin-bottom:20px;
+letter-spacing:1px;
+}
+
+
+/* TEXT */
+
+.about-left p{
+color:#f0f6ff;
+line-height:1.8;
+margin-bottom:20px;
+font-size:16px;
+max-width:560px;
+}
+
+
+/* FEATURES */
+
+.about-features{
+margin-top:25px;
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+.feature{
+background:rgba(255,255,255,0.08);
+padding:10px 14px;
+border-radius:6px;
+font-size:14px;
+border:1px solid rgba(255,255,255,0.25);
+color:white;
+}
+
+
+/* FOUNDER BOX */
+
+.founder-box{
+background:rgba(255,255,255,0.08);
+padding:35px;
+border-radius:10px;
+backdrop-filter:blur(10px);
+border:1px solid rgba(255,255,255,0.2);
+}
+
+
+.founder-title{
+margin-bottom:5px;
+color:white;
+font-size:24px;
+}
+
+.founder-divider{
+width:60px;
+height:3px;
+background:white;
+margin-bottom:10px;
+border-radius:2px;
+}
+
+.founder-sub{
+font-size:13px;
+color:#e0d9ff;
+margin-bottom:15px;
+}
+
+.founder-box p{
+color:#eae6ff;
+line-height:1.7;
+margin-bottom:18px;
+}
+
+
+/* LINK BUTTON */
+
+.linkedin-btn{
+display:inline-block;
+padding:11px 22px;
+background:white;
+color:#4B0082;
+text-decoration:none;
+border-radius:6px;
+font-weight:600;
+transition:0.3s;
+}
+
+.linkedin-btn:hover{
+transform:translateY(-2px);
+opacity:0.9;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.about-section{
+padding:90px 6%;
+}
+
+.about-container{
+grid-template-columns:1fr;
+gap:40px;
+text-align:center;
+}
+
+.about-left h2{
+font-size:32px;
+}
+
+.about-left p{
+margin:auto;
+font-size:15px;
+max-width:100%;
+}
+
+.about-divider{
+margin:14px auto 18px auto;
+}
+
+.about-features{
+grid-template-columns:1fr;
+gap:10px;
+max-width:340px;
+margin:auto;
+}
+
+.founder-divider{
+margin:14px auto 18px auto;
+}
+
+}
+
+</style>
+<section class="process-section" id="process">
+
+<div class="process-container">
+
+<h2 class="process-title">How OptiShield Works</h2>
+
+<div class="process-divider"></div>
+
+<p class="process-sub">
+OptiShield is a retrofit-first AI optimisation platform that integrates with existing Building Management Systems (BMS) to deliver safe, measurable energy optimisation. The system follows a phased, safety-first deployment model to ensure trust, operational stability, and verifiable performance improvements.
+</p>
+
+
+<div class="process-grid">
+
+<!-- STEP 1 -->
+
+<div class="process-card">
+
+<img src="o2.jpeg" class="process-img">
+
+<div class="step">01</div>
+
+<h3>BMS Integration & Data Layer</h3>
+
+<p>
+OptiShield connects directly to existing BMS infrastructure such as BACnet and Modbus systems, ingesting real-time telemetry including HVAC signals, environmental data, and equipment states. The platform validates and structures this data to create a reliable foundation for optimisation.
+</p>
+
+</div>
+
+
+<!-- STEP 2 -->
+
+<div class="process-card">
+
+<img src="o3.jpeg" class="process-img">
+
+<div class="step">02</div>
+
+<h3>Observe Mode</h3>
+
+<p>
+In Observe Mode, OptiShield analyses historical and live building data to understand energy usage patterns, comfort conditions, and equipment behaviour. No control actions are taken, ensuring zero operational risk while establishing performance baselines.
+</p>
+
+</div>
+
+
+<!-- STEP 3 -->
+
+<div class="process-card">
+
+<img src="o4.jpeg" class="process-img">
+
+<div class="step">03</div>
+
+<h3>Shadow Mode</h3>
+
+<p>
+OptiShield generates optimisation recommendations with quantified energy savings and risk insights. Facility teams review these suggestions before execution, ensuring transparency and building operational trust.
+</p>
+
+</div>
+
+
+<!-- STEP 4 -->
+
+<div class="process-card">
+
+<img src="o5.jpeg" class="process-img">
+
+<div class="step">04</div>
+
+<h3>Guarded Control</h3>
+
+<p>
+Approved actions are deployed through controlled write-backs with strict safety constraints, rollback protection, and continuous monitoring. OptiShield ensures optimisation while maintaining comfort, compliance, and equipment integrity.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+
+/* SECTION */
+
+.process-section{
+padding:120px 8%;
+background:white;
+font-family:'Segoe UI',sans-serif;
+text-align:center;
+}
+
+
+/* TITLE */
+
+.process-title{
+font-size:38px;
+margin-bottom:10px;
+color:#4B0082;
+font-weight:700;
+}
+
+
+/* DIVIDER */
+
+.process-divider{
+width:70px;
+height:4px;
+background:linear-gradient(
+#4E387E,
+#571B7E,
+#4B0150,
+#36013F,
+#2E1A47,
+#461B7E,
+#4B0082,
+#342D7E,
+#663399,
+#6A287E,
+#8B008B,
+#800080
+);
+margin:15px auto 25px auto;
+border-radius:2px;
+}
+
+
+/* SUB TEXT */
+
+.process-sub{
+max-width:650px;
+margin:auto;
+margin-bottom:70px;
+color:#555;
+line-height:1.7;
+}
+
+
+/* GRID */
+
+.process-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+}
+
+
+/* CARD */
+
+.process-card{
+background:white;
+padding:25px;
+border-radius:10px;
+text-align:left;
+transition:0.3s;
+border:2px solid transparent;
+background-image:linear-gradient(white,white),
+linear-gradient(
+#4E387E,
+#571B7E,
+#4B0150,
+#36013F,
+#2E1A47,
+#461B7E,
+#4B0082,
+#342D7E,
+#663399,
+#6A287E,
+#8B008B,
+#800080
+);
+background-origin:border-box;
+background-clip:padding-box,border-box;
+}
+
+
+.process-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.1);
+}
+
+
+/* IMAGE */
+
+.process-img{
+width:100%;
+height:150px;
+object-fit:contain;
+margin-bottom:15px;
+}
+
+
+/* STEP */
+
+.step{
+font-size:13px;
+font-weight:700;
+color:#4B0082;
+margin-bottom:8px;
+}
+
+
+/* TEXT */
+
+.process-card h3{
+margin-bottom:10px;
+color:#4B0082;
+}
+
+.process-card p{
+color:#555;
+font-size:14px;
+line-height:1.6;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.process-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+
+
+<script>
+console.log("OptiShield process section loaded");
+</script>
+<section class="platform-section" id="platform">
+
+<div class="platform-container">
+
+<h2 class="platform-title">OptiShield Platform</h2>
+
+<div class="platform-divider"></div>
+
+<p class="platform-sub">
+OptiShield is an AI-driven optimisation layer that integrates with existing
+Building Management Systems (BMS) to safely reduce energy consumption,
+lower carbon emissions, and improve operational efficiency without requiring
+system replacement or complex retrofitting.
+</p>
+
+
+<div class="platform-grid">
+
+<!-- CARD 1 -->
+
+<div class="platform-card">
+
+<img src="o6.jpeg" class="platform-img">
+
+<h3>BMS Integration Layer</h3>
+
+<p class="short-text">
+Seamless integration with existing systems.
+</p>
+
+<p class="more-text">
+OptiShield connects directly to existing BMS infrastructure using
+standard protocols such as BACnet and Modbus, enabling optimisation
+without hardware upgrades or system redesign.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- CARD 2 -->
+
+<div class="platform-card">
+
+<img src="o7.jpeg" class="platform-img">
+
+<h3>Observe → Shadow → Control</h3>
+
+<p class="short-text">
+Phased deployment for safe optimisation.
+</p>
+
+<p class="more-text">
+The platform operates in three stages: Observe Mode builds a baseline
+from live data, Shadow Mode generates optimisation recommendations,
+and Guarded Control executes approved actions with full safety checks.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- CARD 3 -->
+
+<div class="platform-card">
+
+<img src="o8.jpeg" class="platform-img">
+
+<h3>AI Optimisation Engine</h3>
+
+<p class="short-text">
+Learns and adapts to building behaviour.
+</p>
+
+<p class="more-text">
+OptiShield analyses real-time and historical telemetry to identify
+patterns and optimise system performance, without relying on static
+rules or manual configuration.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- CARD 4 -->
+
+<div class="platform-card">
+
+<img src="o9.jpeg" class="platform-img">
+
+<h3>Safety Constraint Engine</h3>
+
+<p class="short-text">
+Ensures comfort and operational safety.
+</p>
+
+<p class="more-text">
+All optimisation actions are validated against predefined limits such
+as temperature, humidity, CO₂ levels, and equipment thresholds to
+prevent unsafe or non-compliant operation.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- CARD 5 -->
+
+<div class="platform-card">
+
+<img src="o10.jpeg" class="platform-img">
+
+<h3>Measurement & Verification</h3>
+
+<p class="short-text">
+Tracks real energy performance.
+</p>
+
+<p class="more-text">
+The platform provides Measurement & Verification (M&V) by comparing
+performance against baseline conditions, delivering transparent and
+audit-ready energy savings insights.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+<!-- CARD 6 -->
+
+<div class="platform-card">
+
+<img src="o11.jpeg" class="platform-img">
+
+<h3>Execution & Rollback Control</h3>
+
+<p class="short-text">
+Safe automation with full control.
+</p>
+
+<p class="more-text">
+Optimisation actions are deployed with monitoring, anomaly detection,
+and rollback mechanisms, ensuring systems can revert to safe baseline
+operation if needed.
+</p>
+
+<button class="learn-btn">Learn More</button>
+
+</div>
+
+
+</div>
+</div>
+
+</section>
+
+
+<style>
+
+/* SECTION */
+
+.platform-section{
+padding:120px 8%;
+background:linear-gradient(
+#4E387E,
+#571B7E,
+#4B0150,
+#36013F,
+#2E1A47,
+#461B7E,
+#4B0082,
+#342D7E,
+#663399,
+#6A287E,
+#8B008B,
+#800080
+);
+font-family:'Segoe UI',sans-serif;
+text-align:center;
+color:white;
+}
+
+
+/* TITLE */
+
+.platform-title{
+font-size:38px;
+margin-bottom:10px;
+font-weight:700;
+color:white;
+}
+
+
+/* DIVIDER */
+
+.platform-divider{
+width:70px;
+height:4px;
+background:white;
+margin:15px auto 25px auto;
+border-radius:2px;
+}
+
+
+/* SUBTEXT */
+
+.platform-sub{
+max-width:650px;
+margin:auto;
+margin-bottom:70px;
+line-height:1.7;
+color:#f5f2ff;
+}
+
+
+/* GRID */
+
+.platform-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
+
+
+/* CARD */
+
+.platform-card{
+background:white;
+color:#333;
+padding:25px;
+border-radius:10px;
+transition:0.3s;
+text-align:left;
+}
+
+
+.platform-card:hover{
+transform:translateY(-8px);
+box-shadow:0 20px 40px rgba(0,0,0,0.3);
+}
+
+
+/* IMAGE */
+
+.platform-img{
+width:100%;
+height:160px;
+object-fit:contain;
+margin-bottom:15px;
+}
+
+
+/* TEXT */
+
+.platform-card h3{
+margin-bottom:8px;
+color:#4B0082;
+}
+
+
+.short-text{
+color:#666;
+margin-bottom:10px;
+}
+
+
+.more-text{
+display:none;
+font-size:14px;
+color:#666;
+line-height:1.6;
+margin-bottom:10px;
+}
+
+
+/* BUTTON */
+
+.learn-btn{
+background:linear-gradient(
+#4E387E,
+#571B7E,
+#4B0150,
+#36013F,
+#2E1A47,
+#461B7E,
+#4B0082,
+#342D7E,
+#663399,
+#6A287E,
+#8B008B,
+#800080
+);
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:6px;
+cursor:pointer;
+font-weight:600;
+}
+
+
+.learn-btn:hover{
+opacity:0.9;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.platform-grid{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+
+
+<script>
+
+const buttons = document.querySelectorAll(".learn-btn");
+
+buttons.forEach(btn => {
+
+btn.addEventListener("click", function(){
+
+const card = this.parentElement;
+const more = card.querySelector(".more-text");
+
+if(more.style.display === "block"){
+
+more.style.display = "none";
+this.innerText = "Learn More";
+
+}else{
+
+more.style.display = "block";
+this.innerText = "Show Less";
+
+}
+
+});
+
+});
+
+</script>
+<section class="pricing-section" id="pricing">
+
+<div class="pricing-container">
+
+<h2 class="pricing-title">OptiShield Commercial Model</h2>
+
+<div class="pricing-divider"></div>
+
+<p class="pricing-sub">
+OptiShield operates as a software-first optimisation platform delivered as a
+subscription-based service. Pricing is tailored based on building complexity,
+portfolio size, and optimisation scope, ensuring scalable and cost-efficient deployment.
+</p>
+
+<div class="pricing-grid">
+
+
+<!-- PILOT -->
+
+<div class="pricing-card">
+
+<h3>Pilot Deployment</h3>
+
+<p class="price">Custom (Evaluation Phase)</p>
+
+<ul>
+<li><span>✔</span> Observe Mode data onboarding</li>
+<li><span>✔</span> Shadow Mode optimisation insights</li>
+<li><span>✔</span> Baseline energy analysis</li>
+<li><span>✔</span> Measurable performance validation</li>
+<li><span>✔</span> Loop-level savings visibility</li>
+<li><span>✔</span> Deployment feasibility assessment</li>
+</ul>
+
+<a href="#contact" class="pricing-btn">Start Pilot</a>
+
+</div>
+
+
+
+<!-- STANDARD -->
+
+<div class="pricing-card featured">
+
+<div class="badge">Core Deployment</div>
+
+<h3>Standard Optimisation</h3>
+
+<p class="price">Subscription Model</p>
+
+<ul>
+<li><span>✔</span> AI-driven BMS optimisation layer</li>
+<li><span>✔</span> Shadow → Guarded Control deployment</li>
+<li><span>✔</span> HVAC and plant optimisation loops</li>
+<li><span>✔</span> Safety constraint enforcement</li>
+<li><span>✔</span> Transactional rollback protection</li>
+<li><span>✔</span> Measurement & Verification (M&V)</li>
+</ul>
+
+<a href="#contact" class="pricing-btn">Request Pricing</a>
+
+</div>
+
+
+
+<!-- ENTERPRISE -->
+
+<div class="pricing-card">
+
+<h3>Portfolio Scale</h3>
+
+<p class="price">Custom Enterprise Pricing</p>
+
+<ul>
+<li><span>✔</span> Multi-site portfolio optimisation</li>
+<li><span>✔</span> Portfolio priors & scalable rollout</li>
+<li><span>✔</span> Carbon & peak demand optimisation</li>
+<li><span>✔</span> Governance & compliance reporting</li>
+<li><span>✔</span> SLA-based performance tracking</li>
+<li><span>✔</span> Dedicated onboarding & support</li>
+</ul>
+
+<a href="#contact" class="pricing-btn">Contact Sales</a>
+
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+
+<style>
+
+/* COLORS (YOUR PURPLE THEME) */
+:root{
+--purple1:#4E387E;
+--purple2:#571B7E;
+--purple3:#4B0082;
+--purple4:#800080;
+--text:#444;
+--white:#ffffff;
+}
+
+
+/* SECTION */
+
+.pricing-section{
+padding:120px 8%;
+background:#ffffff;
+font-family:'Segoe UI',sans-serif;
+text-align:center;
+}
+
+
+/* TITLE */
+
+.pricing-title{
+font-size:38px;
+color:var(--purple3);
+font-weight:700;
+margin-bottom:10px;
+}
+
+
+/* DIVIDER */
+
+.pricing-divider{
+width:80px;
+height:4px;
+background:linear-gradient(
+#4E387E,
+#571B7E,
+#4B0150,
+#36013F,
+#2E1A47,
+#461B7E,
+#4B0082,
+#342D7E,
+#663399,
+#6A287E,
+#8B008B,
+#800080
+);
+margin:15px auto 25px auto;
+border-radius:2px;
+}
+
+
+/* SUBTEXT */
+
+.pricing-sub{
+max-width:650px;
+margin:auto;
+color:#555;
+line-height:1.7;
+margin-bottom:70px;
+}
+
+
+/* GRID */
+
+.pricing-grid{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
+}
+
+
+/* CARD */
+
+.pricing-card{
+background:#ffffff;
+padding:40px 30px;
+border-radius:12px;
+border:2px solid #eee;
+transition:all 0.4s ease;
+position:relative;
+text-align:left;
+}
+
+
+.pricing-card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 45px rgba(0,0,0,0.1);
+border-color:var(--purple2);
+}
+
+
+/* FEATURED */
+
+.featured{
+border:2px solid var(--purple2);
+transform:scale(1.05);
+}
+
+
+/* BADGE */
+
+.badge{
+position:absolute;
+top:-14px;
+left:50%;
+transform:translateX(-50%);
+background:linear-gradient(
+#4E387E,
+#571B7E,
+#4B0150,
+#36013F,
+#2E1A47,
+#461B7E,
+#4B0082,
+#342D7E,
+#663399,
+#6A287E,
+#8B008B,
+#800080
+);
+color:white;
+font-size:12px;
+padding:6px 16px;
+border-radius:20px;
+font-weight:600;
+}
+
+
+/* PRICE */
+
+.price{
+margin:15px 0 22px;
+font-weight:600;
+color:var(--purple2);
+font-size:15px;
+}
+
+
+/* LIST */
+
+.pricing-card ul{
+list-style:none;
+padding:0;
+margin-bottom:28px;
+}
+
+.pricing-card li{
+margin:12px 0;
+color:#444;
+font-size:14px;
+display:flex;
+align-items:center;
+}
+
+.pricing-card li span{
+color:var(--purple2);
+font-weight:bold;
+margin-right:10px;
+}
+
+
+/* BUTTON */
+
+.pricing-btn{
+display:inline-block;
+padding:12px 24px;
+background:linear-gradient(
+#4E387E,
+#571B7E,
+#4B0150,
+#36013F,
+#2E1A47,
+#461B7E,
+#4B0082,
+#342D7E,
+#663399,
+#6A287E,
+#8B008B,
+#800080
+);
+color:white;
+border-radius:6px;
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
+
+.pricing-btn:hover{
+opacity:0.9;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+.pricing-grid{
+grid-template-columns:1fr;
+}
+.featured{
+transform:none;
+}
+}
+
+</style>
+<section class="faq-section" id="faq">
+
+<div class="faq-container">
+
+<h2 class="faq-title">Frequently Asked Questions</h2>
+
+<div class="faq-divider"></div>
+
+<p class="faq-sub">
+Learn how OptiShield helps commercial buildings reduce energy waste,
+improve operational efficiency, and safely optimise existing Building
+Management Systems.
+</p>
+
+
+<div class="faq-list">
+
+
+<!-- FAQ 1 -->
+<div class="faq-item">
+<div class="faq-question">
+<span>What is OptiShield?</span>
+<button class="toggle">+</button>
+</div>
+
+<div class="faq-answer">
+<p>
+OptiShield is a retrofit-first, AI-driven optimisation layer that works on top
+of existing Building Management Systems (BMS). It enables buildings to reduce
+energy consumption, lower carbon emissions, and improve operational efficiency
+without replacing existing infrastructure.
+</p>
+</div>
+</div>
+
+
+<!-- FAQ 2 -->
+<div class="faq-item">
+<div class="faq-question">
+<span>How does OptiShield reduce energy consumption?</span>
+<button class="toggle">+</button>
+</div>
+
+<div class="faq-answer">
+<p>
+The platform analyses live building data such as HVAC signals, occupancy, and
+environmental conditions. It applies optimisation strategies like schedule
+trimming, temperature resets, and system balancing to reduce unnecessary energy
+usage while maintaining comfort and performance.
+</p>
+</div>
+</div>
+
+
+<!-- FAQ 3 -->
+<div class="faq-item">
+<div class="faq-question">
+<span>Does OptiShield require hardware upgrades?</span>
+<button class="toggle">+</button>
+</div>
+
+<div class="faq-answer">
+<p>
+No. OptiShield is designed as a software layer that integrates directly with
+existing BMS systems such as BACnet and Modbus. It avoids costly hardware
+replacement and reduces engineering effort during deployment.
+</p>
+</div>
+</div>
+
+
+<!-- FAQ 4 -->
+<div class="faq-item">
+<div class="faq-question">
+<span>How does OptiShield ensure safety and comfort?</span>
+<button class="toggle">+</button>
+</div>
+
+<div class="faq-answer">
+<p>
+OptiShield operates within strict safety constraints including temperature,
+humidity, and equipment limits. All optimisation actions are validated before
+execution, and unsafe actions are automatically blocked or adjusted to ensure
+comfort, compliance, and equipment protection.
+</p>
+</div>
+</div>
+
+
+<!-- FAQ 5 -->
+<div class="faq-item">
+<div class="faq-question">
+<span>What are Observe, Shadow, and Guarded Control modes?</span>
+<button class="toggle">+</button>
+</div>
+
+<div class="faq-answer">
+<p>
+The platform deploys in phases. Observe Mode builds baseline understanding from
+live data, Shadow Mode generates optimisation recommendations with expected
+impact, and Guarded Control Mode safely executes approved actions with rollback
+protection and continuous monitoring.
+</p>
+</div>
+</div>
+
+
+<!-- FAQ 6 -->
+<div class="faq-item">
+<div class="faq-question">
+<span>How are energy savings measured?</span>
+<button class="toggle">+</button>
+</div>
+
+<div class="faq-answer">
+<p>
+OptiShield uses loop-level Measurement & Verification (M&V) to quantify savings.
+Energy improvements are normalised for weather and occupancy, ensuring results
+are transparent, auditable, and aligned with real operational performance.
+</p>
+</div>
+</div>
+
+
+<!-- FAQ 7 -->
+<div class="faq-item">
+<div class="faq-question">
+<span>Who should use OptiShield?</span>
+<button class="toggle">+</button>
+</div>
+
+<div class="faq-answer">
+<p>
+OptiShield is designed for commercial buildings, property portfolios, and
+facilities teams seeking to reduce energy costs, improve sustainability, and
+enhance building performance without complex upgrades or engineering-heavy
+projects.
+</p>
+</div>
+</div>
+
+
+</div>
+</div>
+</section>
+
+
+
+<style>
+
+/* FAQ SECTION */
+
+.faq-section{
+padding:120px 8%;
+background:linear-gradient(
+135deg,
+#4E387E,
+#571B7E,
+#4B0150,
+#36013F,
+#2E1A47,
+#461B7E,
+#4B0082,
+#342D7E,
+#663399,
+#6A287E,
+#8B008B,
+#800080
+);
+font-family:'Segoe UI',sans-serif;
+}
+
+
+/* CONTAINER */
+
+.faq-container{
+max-width:900px;
+margin:auto;
+}
+
+
+/* TITLE */
+
+.faq-title{
+text-align:center;
+color:white;
+font-size:36px;
+margin-bottom:10px;
+}
+
+
+/* DIVIDER */
+
+.faq-divider{
+width:70px;
+height:3px;
+background:linear-gradient(90deg,#ffffff,#ddd);
+margin:15px auto 25px auto;
+border-radius:2px;
+}
+
+
+/* SUBTEXT */
+
+.faq-sub{
+text-align:center;
+color:#f3eaff;
+margin-bottom:45px;
+line-height:1.6;
+}
+
+
+/* LIST */
+
+.faq-list{
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+
+/* FAQ BOX */
+
+.faq-item{
+background:white;
+border-radius:8px;
+overflow:hidden;
+box-shadow:0 6px 18px rgba(0,0,0,0.15);
+}
+
+
+/* QUESTION */
+
+.faq-question{
+display:flex;
+justify-content:space-between;
+align-items:center;
+cursor:pointer;
+color:white;
+font-size:16px;
+padding:16px 18px;
+background:linear-gradient(135deg,#4E387E,#4B0082,#800080);
+}
+
+
+/* TOGGLE */
+
+.toggle{
+background:white;
+border:none;
+color:#4B0082;
+font-size:18px;
+width:30px;
+height:30px;
+border-radius:4px;
+cursor:pointer;
+}
+
+
+/* ANSWER */
+
+.faq-answer{
+display:none;
+padding:16px 18px;
+}
+
+.faq-answer p{
+color:#333;
+line-height:1.6;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+.faq-title{
+font-size:28px;
+}
+}
+
+</style>
+
+
+
+<script>
+
+const questions = document.querySelectorAll(".faq-question");
+
+questions.forEach(q=>{
+q.addEventListener("click",()=>{
+const answer = q.nextElementSibling;
+const btn = q.querySelector(".toggle");
+
+if(answer.style.display === "block"){
+answer.style.display = "none";
+btn.innerHTML = "+";
+}else{
+
+document.querySelectorAll(".faq-answer").forEach(a=>{
+a.style.display = "none";
+});
+
+document.querySelectorAll(".toggle").forEach(b=>{
+b.innerHTML = "+";
+});
+
+answer.style.display = "block";
+btn.innerHTML = "−";
+}
+});
+});
+
+</script>
+<section class="contact-section" id="contact">
+
+<div class="contact-container">
+
+<!-- LEFT SIDE -->
+<div class="contact-left">
+
+<h2>Contact OptiShield Team</h2>
+<div class="company-divider"></div>
+
+<p class="contact-text">
+OptiShield is an AI-assisted optimisation platform that works on top of existing
+Building Management Systems (BMS) to reduce energy consumption, improve efficiency,
+and maintain operational safety without complex retrofits.
+</p>
+
+<p class="contact-text">
+The platform integrates with HVAC and plant systems, using real-time data and
+controlled automation to deliver measurable energy savings while protecting
+comfort and equipment integrity.
+</p>
+
+<div class="contact-info">
+
+<div class="info-item">
+<strong>Email:</strong>
+<span>omnishielduk@outlook.com</span>
+</div>
+
+<div class="info-item">
+<strong>Phone:</strong>
+<span>+44 7438553508 </span>
+</div>
+
+<div class="info-item">
+<strong>Location:</strong>
+<span>Northampton, United Kingdom</span>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT SIDE FORM -->
+<div class="contact-right">
+
+<form class="contact-form" id="contactForm"
+action="https://api.web3forms.com/submit"
+method="POST">
+
+<input type="hidden" name="access_key"
+value="03bbf7f1-e530-48d2-a135-1da83f04be40">
+
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Business Email" required>
+<input type="tel" name="phone" placeholder="Phone Number">
+
+<textarea name="message" rows="4"
+placeholder="Tell us about your building or energy optimisation needs"></textarea>
+
+<button type="submit" id="submitBtn">
+<span class="btn-text">Send Message</span>
+<span class="loader"></span>
+</button>
+
+<p class="form-status"></p>
+
+<p class="note">
+Your message will be securely delivered to the OptiShield team.
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<style>
+
+/* COLORS (YOUR PURPLE THEME) */
+:root{
+--purple1:#4E387E;
+--purple2:#571B7E;
+--purple3:#4B0082;
+--text:#444;
+--white:#ffffff;
+}
+
+
+/* SECTION */
+.contact-section{
+padding:120px 8%;
+background:#ffffff;
+font-family:'Segoe UI',sans-serif;
+}
+
+
+/* CONTAINER */
+.contact-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:70px;
+}
+
+
+/* LEFT */
+.contact-left h2{
+font-size:36px;
+color:var(--purple3);
+margin-bottom:20px;
+}
+
+
+/* DIVIDER */
+.company-divider{
+width:60px;
+height:3px;
+background:linear-gradient(90deg,var(--purple1),var(--purple2));
+margin-bottom:20px;
+border-radius:2px;
+}
+
+
+/* TEXT */
+.contact-text{
+color:var(--text);
+line-height:1.8;
+margin-bottom:16px;
+}
+
+
+/* INFO */
+.contact-info{
+margin-top:30px;
+padding:22px;
+background:linear-gradient(135deg,#f5f0ff,#ffffff);
+border-left:4px solid var(--purple2);
+border-radius:6px;
+}
+
+.info-item{
+margin-bottom:12px;
+font-size:14px;
+}
+
+
+/* FORM */
+.contact-form{
+display:flex;
+flex-direction:column;
+gap:14px;
+background:linear-gradient(135deg,#ffffff,#f3ecff);
+padding:35px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.06);
+}
+
+
+/* INPUT */
+.contact-form input,
+.contact-form textarea{
+padding:13px;
+border:1px solid #ddd;
+border-radius:5px;
+}
+
+
+/* BUTTON */
+.contact-form button{
+background:linear-gradient(
+#4E387E,
+#571B7E,
+#4B0150,
+#36013F,
+#2E1A47,
+#461B7E,
+#4B0082,
+#342D7E,
+#663399,
+#6A287E,
+#8B008B,
+#800080
+);
+color:#fff;
+border:none;
+padding:14px;
+cursor:pointer;
+border-radius:6px;
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+}
+
+
+/* LOADER */
+.loader{
+width:18px;
+height:18px;
+border:3px solid #fff;
+border-top:3px solid transparent;
+border-radius:50%;
+display:none;
+animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+to{transform:rotate(360deg);}
+}
+
+
+/* STATUS */
+.form-status{
+font-size:13px;
+margin-top:5px;
+}
+
+.success{color:green;}
+.error{color:red;}
+
+
+/* MOBILE */
+@media(max-width:900px){
+.contact-container{
+grid-template-columns:1fr;
+}
+}
+
+</style>
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- LEFT -->
+
+<div class="footer-left">
+
+<h3>OptiShield</h3>
+
+<div class="company-divider"></div>
+
+<p>
+OptiShield is an AI-driven optimisation platform that enhances existing
+Building Management Systems (BMS) to reduce energy waste, improve efficiency,
+and maintain operational safety without requiring complex retrofits.
+</p>
+
+</div>
+
+
+<!-- CENTER -->
+
+<div class="footer-links">
+
+<h4>Platform</h4>
+
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#platform">Platform</a>
+<a href="#process">Process</a>
+
+</div>
+
+
+<!-- RIGHT -->
+
+<div class="footer-links">
+
+<h4>Company</h4>
+
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
+<a href="#faq">FAQ</a>
+
+</div>
+
+</div>
+
+
+<!-- MAIN DIVIDER -->
+
+<div class="footer-divider"></div>
+
+
+<!-- COMPANY SUB TEXT -->
+
+<div class="footer-sub">
+
+<p>
+OptiShield enables commercial buildings to optimise energy consumption through
+a retrofit-friendly software layer that works with existing HVAC and plant systems.
+The platform delivers measurable energy savings, supports compliance reporting,
+and ensures safe, controlled automation using real-time operational data.
+</p>
+
+</div>
+
+
+<!-- BOTTOM -->
+
+<div class="footer-bottom">
+
+<p>© 2026 OptiShield. All rights reserved.</p>
+
+<button class="top-btn" onclick="scrollTopBtn()">↑</button>
+
+</div>
+
+</footer>
+
+
+
+<style>
+
+/* ROOT COLORS */
+
+:root{
+--white:#ffffff;
+}
+
+
+/* FOOTER BACKGROUND (ALL YOUR COLORS COMBINED) */
+
+.footer{
+background:linear-gradient(
+135deg,
+#4E387E,
+#571B7E,
+#4B0150,
+#36013F,
+#2E1A47,
+#461B7E,
+#4B0082,
+#342D7E,
+#663399,
+#6A287E,
+#8B008B,
+#800080
+);
+color:var(--white);
+padding:70px 8% 25px;
+font-family:'Segoe UI',sans-serif;
+}
+
+
+/* CONTAINER */
+
+.footer-container{
+max-width:1100px;
+margin:auto;
+display:grid;
+grid-template-columns:1.5fr 1fr 1fr;
+gap:40px;
+}
+
+
+/* LEFT */
+
+.footer-left{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+}
+
+.footer-left h3{
+font-size:22px;
+margin-bottom:6px;
+}
+
+
+/* DIVIDER */
+
+.company-divider{
+width:60px;
+height:3px;
+background:linear-gradient(90deg,#ffffff,rgba(255,255,255,0.3));
+margin:8px 0 14px 0;
+border-radius:2px;
+}
+
+
+/* TEXT */
+
+.footer-left p{
+font-size:14px;
+line-height:1.6;
+max-width:420px;
+color:#f5f5ff;
+}
+
+
+/* LINKS */
+
+.footer-links{
+display:flex;
+flex-direction:column;
+}
+
+.footer-links h4{
+margin-bottom:12px;
+color:#ffffff;
+}
+
+.footer-links a{
+text-decoration:none;
+color:#eaeaff;
+margin-bottom:8px;
+font-size:14px;
+transition:0.3s;
+}
+
+.footer-links a:hover{
+color:#ffffff;
+padding-left:5px;
+}
+
+
+/* MAIN DIVIDER */
+
+.footer-divider{
+max-width:1100px;
+height:1px;
+background:rgba(255,255,255,0.3);
+margin:40px auto 25px;
+}
+
+
+/* SUB TEXT */
+
+.footer-sub{
+max-width:900px;
+margin:auto;
+text-align:center;
+font-size:13px;
+line-height:1.7;
+color:#eaeaff;
+padding-bottom:20px;
+}
+
+
+/* BOTTOM */
+
+.footer-bottom{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-top:1px solid rgba(255,255,255,0.25);
+padding-top:18px;
+font-size:13px;
+color:#eaeaff;
+}
+
+
+/* BUTTON */
+
+.top-btn{
+background:#ffffff;
+color:#4B0082;
+border:none;
+width:36px;
+height:36px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.top-btn:hover{
+background:#ddd;
+}
+
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.footer-container{
+grid-template-columns:1fr;
+text-align:center;
+gap:35px;
+}
+
+.footer-left{
+align-items:center;
+}
+
+.footer-left p{
+margin:auto;
+max-width:500px;
+}
+
+.company-divider{
+margin:10px auto 16px auto;
+}
+
+.footer-links{
+align-items:center;
+}
+
+.footer-bottom{
+flex-direction:column;
+gap:15px;
+text-align:center;
+}
+
+.top-btn{
+width:40px;
+height:40px;
+font-size:20px;
+}
+
+}
+/* DESKTOP FIX */
+
+.footer-left{
+align-items:flex-start;
+text-align:left;
+}
+
+.footer-left p{
+text-align:left;
+margin:0;
+}
+</style>
+
+
+
+<script>
+
+function scrollTopBtn(){
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+}
+
+</script>
+
+
+</body>
+</html>
+
+
